@@ -1,3 +1,4 @@
+
 # Создадим переменную immutable_var и запишем в нее кортеж
 immutable_var = (1, 3.3, "hello", True)
 
