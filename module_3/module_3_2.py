@@ -5,25 +5,21 @@ def send_email(message, recipient,*, sender = "university.help@gmail.com"):
     # Проверка на наличие символа "@" в адресах
     if "@" not in recipient or "@" not in sender:
         print("Невозможно отправить письмо с адреса ", sender, "на адрес ", recipient)
-        return
 
     # Проверка на отправку самому себе
-    if recipient == sender:
+    elif recipient == sender:
         print("Нельзя отправить письмо самому себе!")
-        return
 
     # Проверка на корректность домена у получателя
-    if not any(recipient.endswith(sub_suffix) for sub_suffix in suffix):
+    elif not any(recipient.endswith(sub_suffix) for sub_suffix in suffix):
         print("Невозможно отправить письмо с адреса ", sender, "на адрес ", recipient)
-        return
 
     # Проверка на корректность домена у отправителя
-    if not any(sender.endswith(sub_suffix) for sub_suffix in suffix):
+    elif not any(sender.endswith(sub_suffix) for sub_suffix in suffix):
         print("Невозможно отправить письмо с адреса ", sender, "на адрес ", recipient)
-        return
 
     # Проверка отправителя
-    if sender == "university.help@gmail.com":
+    elif sender == "university.help@gmail.com":
         print("Письмо успешно отправлено с адреса ", sender,  "на адрес ", recipient)
 
     else:
