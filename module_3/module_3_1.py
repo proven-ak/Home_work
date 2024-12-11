@@ -19,7 +19,8 @@ def string_info(string):
 # False - если отсутствует
 def is_contains(string, list_to_search):
     count_calls()
-    up_list_to_search = [list_.upper() for list_ in list_to_search]   # переводим строки списка в верхний регистр
+   # переводим строки списка в верхний регистр
+    up_list_to_search = [list_.upper() for list_ in list_to_search]
     return string.upper() in up_list_to_search
 
 # Проверка
