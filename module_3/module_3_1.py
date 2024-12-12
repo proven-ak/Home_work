@@ -4,7 +4,7 @@ result = 0
 
 # Функция подсчета вызовов
 def count_calls():
-    global calls
+    global result
     result += 1
 
 
@@ -29,4 +29,4 @@ print(string_info('Capybara'))
 print(string_info('Armageddon'))
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
 print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
-print(calls)
+print(result)
